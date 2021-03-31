@@ -1,0 +1,1 @@
+cat /etc/passwd | awk -F':' '{print $1}' | awk 'NR%2==0' | rev | sort -r | awk -v a=$FT_LINE1 'NR>=a' | awk -v a=$FT_LINE1 -v b=$FT_LINE2 'NR<=b-a+1' | tr '\n' ',' | sed 's|,|, |g' | sed 's|, $|.|'

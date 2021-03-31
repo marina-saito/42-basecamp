@@ -1,0 +1,1 @@
+ip address | awk -F'ether ' '{print $2}' | awk -F' brd' '{print $1}' | grep -v '^$'
