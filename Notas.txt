@@ -1,0 +1,10 @@
+Errei, corrigi, mas não resubmeti para checar:
+- C00: ex07
+- C02: ex09, ex11, ex12
+- C03: ex05
+- C05: ex06, ex07
+- C07: ex00, ex03, ex05
+
+Errei, e não descobri onde:
+- C03: ex04
+- C07: ex04

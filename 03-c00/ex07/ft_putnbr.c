@@ -6,13 +6,14 @@
 /*   By: msayuri- <msayuri-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 12:12:34 by msayuri-          #+#    #+#             */
-/*   Updated: 2021/04/01 17:51:01 by msayuri-         ###   ########.fr       */
+/*   Updated: 2021/04/16 20:41:33 by msayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 int power_base_10(int power);
+int count_digits(int nb);
 
 void	ft_putnbr(int nb)
 {
@@ -21,13 +22,8 @@ void	ft_putnbr(int nb)
 	int		i_digit;
 	char	c_digit;
 
-	digits = 0;
 	copy_nb = nb;
-	while (copy_nb != 0)
-	{
-		copy_nb /= 10;
-		digits++;
-	}
+	digits = count_digits(nb);
 	if (nb < 0)
 	{
 		write(1, "-", 1);
@@ -54,4 +50,23 @@ int		power_base_10(int power)
 		power--;
 	}
 	return (result);
+}
+
+int		count_digits(int nb)
+{
+	int copy_nb;
+	int digits;
+
+	copy_nb = nb;
+	digits = 0;
+	if (nb == 0)
+	{
+		digits = 1;
+	}
+	while (copy_nb != 0)
+	{
+		copy_nb /= 10;
+		digits++;
+	}
+	return (digits);
 }
