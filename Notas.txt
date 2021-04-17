@@ -8,3 +8,25 @@ Errei, corrigi, mas não resubmeti para checar:
 Errei, e não descobri onde:
 - C03: ex04
 - C07: ex04
+
+Não submeti, então não sei se está certo ou errado:
+- C08
+- C09
+
+bashrc
+  1 export LS_OPTIONS='--color=auto'
+  2 export GEM_HOME=/usr/local/bundle
+  3 export PATH=/usr/local/bundle/bin:/usr/local/bundle/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  4 eval "`dircolors`"
+  5 alias ls='ls $LS_OPTIONS'
+  6 alias ll='ls $LS_OPTIONS -l'
+  7 alias l='ls $LS_OPTIONS -lA'
+  8 alias norminette=/etc/norminette-client/norminette.rb
+  9 alias basecamp='bash ${HOME}/.basecamp/basecamp'
+ 10 alias c="cc *.c -Wall -Wextra -Werror && ./a.out"
+ 11 alias n="norminette -R CheckForbiddenSourceHeader"
+ 12 alias cl="clear"
+ 13 
+ 14 
+ 15 export http_proxy=10.3.107.01:3128
+ 16 export https_proxy=10.3.107.01:3128
